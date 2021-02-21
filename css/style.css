@@ -25,6 +25,10 @@ body.noscroll {
   overflow: hidden;
 }
 
+h1, h2, h3 {
+  margin-top: 0px;
+}
+
 a,
 a:visited,
 a:hover {
@@ -32,8 +36,10 @@ a:hover {
 }
 
 .container {
-  padding-left: 1.5rem;
+  padding-top: 2.25rem;
   padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -273,5 +279,43 @@ button,
 .fade-out {
   -webkit-animation: fade-out 200ms ease-in-out forwards;
           animation: fade-out 200ms ease-in-out forwards;
+}
+
+.hero__image {
+  border: 1px solid magenta;
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/image-mockups.png");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.hero__text {
+  text-align: center;
+}
+
+.hero__text h1 {
+  font-weight: 300;
+  font-size: 2.31rem;
+  line-height: 1;
+  color: #2b304f;
+  margin-bottom: 1.5rem;
+}
+
+.hero__text p {
+  line-height: 1.5;
+  margin-bottom: 2.58rem;
 }
 /*# sourceMappingURL=style.css.map */
