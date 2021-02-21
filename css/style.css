@@ -36,10 +36,44 @@ a:hover {
 }
 
 .container {
-  padding-top: 2.25rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
   padding-right: 1.5rem;
   padding-bottom: 2.25rem;
   padding-left: 1.5rem;
+}
+
+.container--pall {
+  padding-top: 2.25rem;
+  padding-right: 2.25rem;
+  padding-left: 1.5rem;
+  padding-bottom: 2.25rem;
+}
+
+.container--py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container--pt {
+  padding-top: 2.25rem;
+}
+
+.container--pr {
+  padding-top: 1.5rem;
+}
+
+.container--pb {
+  padding-top: 2.25rem;
+}
+
+.container--pl {
+  padding-top: 1.5rem;
 }
 
 .flex {
@@ -68,6 +102,7 @@ a:hover {
 
 button,
 .button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#21bde4));
   background: linear-gradient(to right, #31d35c, #21bde4);
@@ -76,6 +111,7 @@ button,
   cursor: pointer;
   color: white;
   font-weight: 400;
+  font-size: font-sm;
 }
 
 @media (max-width: 63.9375em) {
@@ -196,17 +232,6 @@ button,
   opacity: 1;
 }
 
-.header__cta {
-  font-size: font-sm;
-  color: white;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
-}
-
-.header__cta:hover {
-  opacity: 0.75;
-}
-
 .has-fade {
   visibility: hidden;
 }
@@ -281,14 +306,38 @@ button,
           animation: fade-out 200ms ease-in-out forwards;
 }
 
+@media (min-width: 64em) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .hero__image {
-  border: 1px solid magenta;
   position: relative;
   background-image: url("/images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero__image {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    min-height: 41rem;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-position: left center;
+  }
 }
 
 .hero__image::before {
@@ -306,12 +355,30 @@ button,
   text-align: center;
 }
 
+@media (min-width: 64em) {
+  .hero__text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: left;
+  }
+}
+
 .hero__text h1 {
   font-weight: 300;
   font-size: 2.31rem;
   line-height: 1;
   color: #2b304f;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
 }
 
 .hero__text p {
