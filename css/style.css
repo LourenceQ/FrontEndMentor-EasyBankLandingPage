@@ -118,10 +118,6 @@ a:hover {
 .container {
   max-width: 69.375rem;
   margin: 0 auto;
-  padding-top: 2.25rem;
-  padding-right: 1.5rem;
-  padding-bottom: 2.25rem;
-  padding-left: 1.5rem;
 }
 
 .container--pall {
@@ -193,6 +189,8 @@ button,
   color: white;
   font-weight: 400;
   font-size: 0.875rem;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 @media (max-width: 63.9375em) {
@@ -362,6 +360,14 @@ button,
   background-position: center bottom;
 }
 
+@media (min-width: 64em) {
+  .hero__image::before {
+    width: 150%;
+    background-size: 122%;
+    background-position: 0% 83%;
+  }
+}
+
 .hero__image::after {
   content: "";
   position: absolute;
@@ -371,6 +377,16 @@ button,
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+
+@media (min-width: 64em) {
+  .hero__image::after {
+    width: 120%;
+    height: 122%;
+    background-size: 94%;
+    background-position: center 150%;
+    left: 22%;
+  }
 }
 
 .hero__text {
