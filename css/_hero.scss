@@ -7,8 +7,7 @@
         }             
     }    
     
-    &__image{        
-        border: 1px solid magenta;
+    &__image{                
         position: relative;
         background-image: url('/images/bg-intro-mobile.svg');
         background-size: cover;
@@ -16,32 +15,35 @@
         background-position: center center;
         min-height: 17.5rem;
 
+        @include breakpoint-up(medium){
+            min-height: 25rem;
+            background-position: center 60%;
+        }
+
         @include breakpoint-up(large){
             flex: 3;
             order: 2;
             min-height: 41rem; 
             background-image: none;
-            //  background-image: url('/images/bg-intro-desktop.svg');
-            //  background-position: left center;
+            // background-image: url('/images/bg-intro-desktop.svg');
+            // background-position: left center;
         }
         
         // &::before, &::after{
-        //     border: 1px solid magenta;
+        //    // border: 1px solid magenta;
         // }
-        &::before{
+        &::before{           
+            
+            @include breakpoint-up(large){
             content: "";
-            position: absolute;
-            width: 100%;
+            position: absolute;            
             height: 100%;
-            background-image: url('/images/bg-intro-desktop.svg');
-            background-size: 93%;            
+            background-image: url('/images/bg-intro-desktop.svg');                     
             background-repeat: no-repeat;
             background-position: center bottom; 
-
-            @include breakpoint-up(large){
-                width: 150%;
-                background-size: 122%;                
-                background-position: 0% 83%;
+            width: 150%;
+            background-size: 122%;                
+            background-position: 0% 83%;
             }
         }
         &::after{
@@ -53,6 +55,10 @@
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
+
+            @include breakpoint-up(medium){
+                background-size: 52%;
+            }
 
             @include breakpoint-up(large){
                 width: 120%;
