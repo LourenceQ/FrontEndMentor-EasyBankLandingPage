@@ -443,6 +443,12 @@ button,
   margin-bottom: 2.25rem;
 }
 
+@media (min-width: 64em) {
+  .feature__into {
+    width: 55%;
+  }
+}
+
 @media (min-width: 40em) {
   .feature__grid {
     display: -webkit-box;
