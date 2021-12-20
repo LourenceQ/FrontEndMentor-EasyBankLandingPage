@@ -1,0 +1,25 @@
+.hero {
+    &__image {
+        border: 1px solid magenta;
+        position: relative;// this gives error on the hamburguer button opening
+        background-image: url("/images/bg-intro-mobile.svg");
+        margin-bottom: -10px;
+        background-size:auto ;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("/images/image-mockups.png");
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    }
+    &__text {
+    }
+}
